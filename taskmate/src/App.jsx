@@ -37,7 +37,7 @@ function App() {
   }
     
   return (
-    <div className="h-screen dark:bg-black bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <div className="h-screen dark:bg-black bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
       <Navbar/>
       <div>
         <div className='mx-auto max-w-[720px] min-h-[550px] shadow-2xl bg-white rounded-2xl'>

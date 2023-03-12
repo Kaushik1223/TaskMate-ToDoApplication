@@ -7,15 +7,15 @@ export default function TodoItems(props) {
   return (
     <div onClick={() => setDone(!done)} className={`select-none cursor-pointer p-4 flex justify-between items-center`}>
         <div>
-            <span className={`${done === true ? 'line-through' : ''} text-[20px] pr-3 font-roboto text-black`}>
+            <span className={`${done === true ? 'line-through' : ''} text-[18px] pr-3 font-roboto font-semibold text-[#404040]`}>
             {props.item}
             </span>
-            <span className='font-roboto text-[13px] text-slate-500'>
+            <span className='font-roboto text-[13px] font-normal text-slate-400'>
                 {props.time}
             </span>
              
         </div>
-        <div onClick={() => props.removeHandler(props.id)}>   
+        <div className='hover:text-red-600' onClick={() => props.removeHandler(props.id)}>   
             <BsTrash3/>
         </div>
     </div>

@@ -7,7 +7,7 @@ export default function Todo(props) {
   return (
     <div className='p-5 mt-10 flex justify-around'>
       <input type="text" placeholder='Add todo' className='p-3 focus:outline-none w-[90%] border border-slate-400 rounded-xl' ref={inputBox}/>
-      <div className='cursor-pointer w-[50px] h-[50px] bg-[#e74c3c] text-white text-3xl rounded-[50%] flex justify-center items-center' onClick={() => {
+      <div className='cursor-pointer w-[50px] h-[50px] bg-purple-400 hover:bg-pink-400 text-white text-3xl rounded-[50%] flex justify-center items-center' onClick={() => {
             props.handler(inputBox.current.value)
             inputBox.current.value = "";
         } }>
