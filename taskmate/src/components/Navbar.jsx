@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import {BsFillMoonStarsFill} from "react-icons/bs";
-import {FaUserCircle} from "react-icons/fa";
 import {HiMenu} from "react-icons/hi";
 import { useState, useEffect } from "react";
 
+
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
-    const [theme, setTheme] = useState(null);
+    const [theme, setTheme] = useState(false);
 
     useEffect(() => {
         if(window.matchMedia('(prefers-color-scheme: dark)').matches){
@@ -31,12 +31,12 @@ export default function Navbar() {
         };
     
 return (
-    <nav className="w-full bg-white shadow">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <nav className="w-full bg-white shadow dark:bg-slate-800">
+            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-7">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-3xl text-purple-600 font-bold font-roboto">TaskMate</h2>
+                            <h2 className="text-3xl text-purple-600 dark:text-white font-bold font-roboto">TaskMate</h2>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -83,13 +83,13 @@ return (
                         }`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <li className="font-roboto font-normal text-gray-700 hover:text-purple-600">
+                            <li className="font-roboto font-normal text-gray-700 dark:text-white dark:hover:text-pink-600 hover:text-purple-600">
                                 <a href="#">Todo</a>
                             </li>
-                            <li className="font-roboto text-gray-700 hover:text-purple-600">
+                            <li className="font-roboto text-gray-700 dark:text-white dark:hover:text-pink-600 hover:text-purple-600">
                                 <a href="https://github.com/Kaushik1223">Projects</a>
                             </li>
-                            <li className="font-roboto text-gray-700 hover:text-purple-600">
+                            <li className="font-roboto text-gray-700 dark:text-white dark:hover:text-pink-600 hover:text-purple-600">
                                 <a href="#">Team</a>
                             </li>
                             <button className="bg-white text-gray-700 duration-500 px-3 py-2 mx-0 hover:bg-pink-500 hover:text-white rounded-3xl"
