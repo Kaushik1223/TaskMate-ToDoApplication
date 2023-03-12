@@ -15,7 +15,7 @@ export default function TodoItems(props) {
             </span>
              
         </div>
-        <div className='hover:text-red-600' onClick={() => props.removeHandler(props.id)}>   
+        <div className='duration-500 hover:text-red-600' onClick={() => props.removeHandler(props.id)}>   
             <BsTrash3/>
         </div>
     </div>
