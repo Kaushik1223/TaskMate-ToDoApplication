@@ -5,8 +5,8 @@ export default function Todo(props) {
     const inputBox = useRef();
     
   return (
-    <div className='p-5 mt-10 flex justify-around'>
-      <input type="text" placeholder='Add todo' className='p-3 focus:outline-none w-[90%] border border-slate-400 rounded-xl' ref={inputBox} />
+    <div className='p-5 mt-10 flex justify-around items-center md:p-5'>
+      <input type="text" placeholder='Add task' className='p-3 focus:outline-none md:w-[90%] w-[75%] border border-slate-400 rounded-xl' ref={inputBox} />
       <div className='cursor-pointer w-[50px] h-[50px] bg-purple-400 hover:bg-pink-400 duration-500 text-white text-3xl rounded-[50%] flex justify-center items-center' onClick={() => {
             props.handler(inputBox.current.value)
             inputBox.current.value = "";
