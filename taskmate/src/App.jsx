@@ -68,7 +68,7 @@ function App() {
       <div className="flex h-screen bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
         <Drawer />
 
-        <div className="my-20 mx-auto space-y-3 bg-white shadow-2xl rounded-xl">
+        <div className="my-20 sm:mt-10 mx-auto space-y-3 bg-white shadow-2xl rounded-xl">
           
           <TaskForm onAdd={addTask} />
           {tasks.map((task, index) => (

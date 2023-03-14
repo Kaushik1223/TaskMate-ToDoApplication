@@ -2,7 +2,9 @@ import { useState } from "react";
 import {IoIosAdd} from "react-icons/io";
 
 export default function TaskForm({ onAdd }) {
+  
   const [taskName, setTaskName] = useState("");
+
   function handleSubmit(ev) {
     ev.preventDefault();
     onAdd(taskName);
@@ -10,7 +12,7 @@ export default function TaskForm({ onAdd }) {
   }
   return (
     <form className="" onSubmit={handleSubmit}>
-      <div className="mr-3 mt-2 container  flex justify-center items-center">
+      <div className="mr-3 mt-2 container flex justify-center items-center">
         <div className="relative">
           <div className="absolute top-4 left-3"></div>
           <input

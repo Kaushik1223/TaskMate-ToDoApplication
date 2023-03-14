@@ -6,7 +6,7 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
   return (
     <div
       className={
-        "task bg-white rounded-lg p-1 md:p-3 mt-5 flex transition-opacity duration-300 w-30 sm:w-full" +
+        "bg-white rounded-lg p-1 md:p-3 mt-5 flex transition-opacity duration-300 w-30 sm:w-full" +
         (done ? "opacity-50" : "")
       }
     >
