@@ -1,20 +1,18 @@
 import React, { useRef } from 'react'
 import {BsFillMoonStarsFill} from "react-icons/bs";
-import {FaUserCircle} from "react-icons/fa";
-import {HiMenu} from "react-icons/hi";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
 return (
     <div className={darkMode ? "dark" : ""}>
-    <nav className="w-full bg-white shadow dark:bg-gray-800">
+    <nav className="w-full bg-white shadow bg-opacity-75 backdrop-blur dark:bg-gray-800">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h2 className="text-3xl text-purple-600 dark:text-slate-100 font-bold font-roboto">TaskMate</h2>
+                            <h2 className="text-2xl text-purple-600 dark:text-slate-100 font-bold font-roboto">TaskMate</h2>
                         </a>
                         <div className="md:hidden">
                             <button
