@@ -17,7 +17,7 @@ export default function TaskForm({ onAdd }) {
           <div className="absolute top-4 left-3"></div>
           <input
             type="text"
-            className="mx-0 h-14 w-60 sm:w-full pl-10 pr-20 bg-white border-slate-300 border-2 rounded-2xl z-0 focus:shadow focus:outline-none"
+            className="mx-0 h-14 w-60 sm:w-full pl-10 pr-20 bg-white shadow border-slate-300 border-2 rounded-2xl z-0 focus:shadow focus:outline-none"
             placeholder="Add task"
             value={taskName}
             onChange={(ev) => setTaskName(ev.target.value)}

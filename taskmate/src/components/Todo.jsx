@@ -1,4 +1,3 @@
-import Checkbox from "./Checkbox";
 import { useState } from "react";
 
 export default function Task({ name, done, onToggle, onTrash, onRename }) {
@@ -6,14 +5,13 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
   return (
     <div
       className={
-        "bg-white rounded-lg p-1 md:p-3 mt-5 flex transition-opacity duration-300 w-30 sm:w-full" +
+        "bg-white shadow-xl rounded-lg p-1 md:p-3 mt-5 flex transition-opacity duration-300 w-30 sm:w-full" +
         (done ? "opacity-50" : "")
       }
     >
-      <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {!editMode && (
         <div
-          className="task-name text-"
+          className="ml-3 p-1"
           onClick={() => setEditMode((prev) => !prev)}
         >
           <span>{name}</span>
@@ -29,7 +27,7 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
           }}
         >
           <input
-            className=" bg-transparent border-2  border-purple-100 rounded-lg ml-2 text-black block w-full"
+            className="bg-transparent border-2  border-slate-300 rounded-lg ml-2 text-black block w-full"
             type="text"
             value={name}
             onChange={(ev) => onRename(ev.target.value)}

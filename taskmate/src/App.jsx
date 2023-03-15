@@ -1,5 +1,4 @@
 import "./App.css";
-import Drawer from "./components/SideMenu";
 import Navbar from "./components/Navbar";
 import TaskForm from "./components/TodoForm";
 import Task from "./components/Todo";
@@ -7,7 +6,11 @@ import { useEffect, useState } from "react";
 
 
 function App() {
+
+  document.title='TaskMate'
+
   const [tasks, setTasks] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (tasks.length === 0) return;
@@ -39,20 +42,6 @@ function App() {
     });
   }
 
-  const numberComplete = tasks.filter((t) => t.done).length;
-
-  const numberTotal = tasks.length;
-
-  function getMessage() {
-    const percentage = (numberComplete / numberTotal) * 100;
-    if (percentage === 0) {
-      return "Try to do at least one!😠";
-    }
-    if (percentage === 100) {
-      return "Nice job for today!🙌🏻";
-    }
-    return "Keep going🥹";
-  }
 
   function renameTask(index, newName) {
     setTasks((prev) => {
@@ -63,22 +52,24 @@ function App() {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 overflow-x-hidden">
-      <Navbar />
-      <div className="flex h-screen bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
-        <Drawer />
 
-        <div className="my-20 sm:mt-10 mx-auto space-y-3 bg-white shadow-2xl rounded-xl">
-          
-          <TaskForm onAdd={addTask} />
-          {tasks.map((task, index) => (
-            <Task
-              {...task}
-              onRename={(newName) => renameTask(index, newName)}
-              onTrash={() => removeTask(index)}
-              onToggle={(done) => updateTaskDone(index, done)}
-            />
-          ))}
+    <div className={darkMode ? "dark" : ""}>
+      <div className="h-screen bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 overflow-x-hidden">
+        <Navbar />
+        <div className="flex h-10 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200">
+
+          <div className="my-20 sm:mt-10 mx-auto space-y-3 bg-white shadow-2xl rounded-xl">
+            
+            <TaskForm onAdd={addTask} />
+            {tasks.map((task, index) => (
+              <Task
+                {...task}
+                onRename={(newName) => renameTask(index, newName)}
+                onTrash={() => removeTask(index)}
+                onToggle={(done) => updateTaskDone(index, done)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

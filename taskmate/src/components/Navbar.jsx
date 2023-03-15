@@ -3,10 +3,13 @@ import {BsFillMoonStarsFill} from "react-icons/bs";
 import { useState } from "react";
 
 export default function Navbar() {
+
     const [navbar, setNavbar] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    // const [darkMode, setDarkMode] = useState(false);
+
 return (
-    <div className={darkMode ? "dark" : ""}>
+    
+    // <div className={darkMode ? "dark" : ""}>
     <nav className="w-full bg-white shadow bg-opacity-75 backdrop-blur dark:bg-gray-800">
             <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
@@ -16,7 +19,7 @@ return (
                         </a>
                         <div className="md:hidden">
                             <button
-                                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
                                 onClick={() => setNavbar(!navbar)}
                             >
                                 {navbar ? (
@@ -68,16 +71,17 @@ return (
                             <li className="font-roboto text-gray-700 dark:text-slate-100 hover:text-purple-600 dark:hover:text-pink-600">
                                 <a href="#">Team</a>
                             </li>
-                            <button className="bg-white text-gray-700 duration-500 px-3 py-2 mx-0 hover:bg-pink-500 hover:text-white rounded-3xl"
+                            {/* <button className="bg-white text-gray-700 duration-500 px-3 py-2 mx-0 hover:bg-pink-500 hover:text-white rounded-3xl"
                             >
                             <BsFillMoonStarsFill onClick={()=>setDarkMode(!darkMode)}/>
-                            </button>
+                            </button> */}
                         </ul>
                         
                     </div>
                 </div>
             </div>
         </nav>
-        </div>
+
+        // </div>
     );
 }
