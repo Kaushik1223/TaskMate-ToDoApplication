@@ -19,7 +19,7 @@ return (
                         </a>
                         <div className="md:hidden">
                             <button
-                                className="p-2 text-white rounded-md outline-none focus:border-white focus:border"
+                                className="p-2 text-slate-600 rounded-md outline-none hover:text-slate-800"
                                 onClick={() => setNavbar(!navbar)}
                             >
                                 {navbar ? (
