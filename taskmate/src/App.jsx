@@ -10,7 +10,7 @@ function App() {
   document.title='TaskMate'
 
   const [tasks, setTasks] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (tasks.length === 0) return;
